@@ -1,4 +1,4 @@
-package employeeservice.configuration;
+package statistics.configuration;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.commons.lang3.StringUtils;
@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "employeeservice.repository")
+@EnableJpaRepositories(basePackages = "statistics.repository")
 @EnableTransactionManagement
 public class JpaConfiguration
 {
@@ -64,7 +64,7 @@ public class JpaConfiguration
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
 		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
 		factoryBean.setDataSource(dataSource());
-		factoryBean.setPackagesToScan("employeeservice.domain");
+		factoryBean.setPackagesToScan("statistics.domain");
 		factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
 		factoryBean.setJpaProperties(jpaProperties());
 		return factoryBean;

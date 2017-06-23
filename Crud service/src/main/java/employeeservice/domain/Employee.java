@@ -1,4 +1,4 @@
-package employeeservice.model;
+package employeeservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -16,6 +16,7 @@ public class Employee
     private Long id;
     private String fullName;
     private String position;
+    private Integer age;
     private String department;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate hireDate;
@@ -50,6 +51,16 @@ public class Employee
     public void setPosition(String position)
     {
         this.position = position;
+    }
+
+    public Integer getAge()
+    {
+        return age;
+    }
+
+    public void setAge(Integer age)
+    {
+        this.age = age;
     }
 
     public String getDepartment()

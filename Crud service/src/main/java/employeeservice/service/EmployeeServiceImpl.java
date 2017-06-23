@@ -1,6 +1,6 @@
 package employeeservice.service;
 
-import employeeservice.model.Employee;
+import employeeservice.domain.Employee;
 import employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

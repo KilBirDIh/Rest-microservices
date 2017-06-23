@@ -1,6 +1,6 @@
 package employeeservice.controller;
 
-import employeeservice.model.Employee;
+import employeeservice.domain.Employee;
 import employeeservice.service.EmployeeService;
 import employeeservice.util.CustomErrorType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
 public class RestApiController
 {
     @Autowired
@@ -43,7 +42,7 @@ public class RestApiController
         employeeService.saveEmployee(employee);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/api/employee/{id}").buildAndExpand(employee.getId()).toUri());
+        headers.setLocation(ucBuilder.path("/employees/employee/{id}").buildAndExpand(employee.getId()).toUri());
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
 

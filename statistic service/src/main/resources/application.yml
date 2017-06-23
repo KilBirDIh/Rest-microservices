@@ -1,13 +1,13 @@
 ---
 server:
-  port: 8090
-  contextPath: /employees
+  port: 8099
+  contextPath: /statistics
 ---
 spring:
   profiles: local, default
 datasource:
   sampleapp:
-    url: jdbc:h2:~/test
+    url: jdbc:h2:~/statitstics
     username: SA
     password:
     driverClassName: org.h2.Driver

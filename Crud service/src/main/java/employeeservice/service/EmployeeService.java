@@ -1,6 +1,6 @@
 package employeeservice.service;
 
-import employeeservice.model.Employee;
+import employeeservice.domain.Employee;
 
 import java.util.List;
 

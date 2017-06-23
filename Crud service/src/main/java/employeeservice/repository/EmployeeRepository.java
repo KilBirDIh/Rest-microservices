@@ -1,6 +1,6 @@
 package employeeservice.repository;
 
-import employeeservice.model.Employee;
+import employeeservice.domain.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
